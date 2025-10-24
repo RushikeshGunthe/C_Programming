@@ -7,35 +7,38 @@
 #include <stdio.h>
 
 //////////////////////////////////////////////////////////////////////////////////////////
-// Function Name:   Percentage
-// Input:           Integer, Integer
-// Output:          Float
-// Description:     Accepts Total marks as iNo1 and marks obtained as iNo2 and returns percentage
+// Function Name:   Display
+// Input:           Integer
+// Output:          None
+// Description:     Accepts number and prints number till that number starting from the negative of given number
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-float Percentage(int iNo1, int iNo2)
+void Display(int iNo)
 {
-    return ((float)iNo2 / iNo1) * 100;
+    int iCnt = 0;
+
+    if (iNo < 0) // updater for negative number
+    {
+        iNo = -iNo;
+    }
+
+    for (iCnt = -iNo; iCnt <= iNo; iCnt++)
+    {
+        printf("%d\t", iCnt);
+    }
 }
 
 int main()
 {
-    int iValue1 = 0, iValue2 = 0;
+    int iValue1 = 0;
 
-    float fRet = 0.0f;
-
-    printf("Enter Total marks\n");
+    printf("Enter number\n");
     scanf("%d", &iValue1);
 
-    printf("Enter Obtained marks: \n");
-    scanf("%d", &iValue2);
-
-    fRet = Percentage(iValue1, iValue2);
-
-    printf("Percentage is: %.2f\n", fRet);
+    Display(iValue1);
 
     return 0;
 }
