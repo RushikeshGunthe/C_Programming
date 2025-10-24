@@ -8,36 +8,39 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name:   FactRev
-// Input:           Integer     12
-// Output:          Integer     5   7   8   10  11
-// Description:     This function accepts a number from user and displays all its non factors
+// Function Name:   CheckNumberType
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and checks whether it positive, negative or zero
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void FactRev(int iNo)
+void CheckNumberType(int iNo)
 {
-    int iCnt = 0;
-
-    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    if (iNo > 0)
     {
-        if (iNo % iCnt != 0)
-        {
-            printf("%d\t", iCnt);
-        }
+        printf("%d is Positive number.\n", iNo);
+    }
+    else if (iNo < 0)
+    {
+        printf("%d is Negative number.\n", iNo);
+    }
+    else
+    {
+        printf("Number is Zero.\n");
     }
 }
 
 int main()
 {
-    int iValue = 0;
+    int iNo = 0;
 
     printf("Enter number:\n");
-    scanf("%d", &iValue);
+    scanf("%d", &iNo);
 
-    FactRev(iValue);
+    CheckNumberType(iNo);
 
     return 0;
 }

@@ -8,25 +8,24 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name:   FactRev
-// Input:           Integer     12
-// Output:          Integer     5   7   8   10  11
-// Description:     This function accepts a number from user and displays all its non factors
+// Function Name:   CheckEvenOdd
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and checks number is even or odd
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void FactRev(int iNo)
+void CheckEvenOdd(int iNo)
 {
-    int iCnt = 0;
-
-    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    if (iNo % 2 == 0)
     {
-        if (iNo % iCnt != 0)
-        {
-            printf("%d\t", iCnt);
-        }
+        printf("%d is even.\n", iNo);
+    }
+    else
+    {
+        printf("%d is odd.\n", iNo);
     }
 }
 
@@ -37,7 +36,7 @@ int main()
     printf("Enter number:\n");
     scanf("%d", &iValue);
 
-    FactRev(iValue);
+    CheckEvenOdd(iValue);
 
     return 0;
 }

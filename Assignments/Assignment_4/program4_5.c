@@ -34,8 +34,6 @@ int FactDiff(int iNo)
             iSumNonFact = iSumNonFact + iCnt;
         }
     }
-    printf("Sum of factors: %d\n", iSumFact);
-    printf("Sum of non factors: %d\n", iSumNonFact);
     return iSumFact - iSumNonFact;
 }
 
