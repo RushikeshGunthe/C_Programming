@@ -9,29 +9,39 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //
 // Function Name:   Display
-// Input:           None
-// Output:          5 to 1 numbers printed
-// Description:     This function Displays numbers from 5 to 1 on the screen
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and prints that number of times * on screen
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void Display()
+void Display(int iNo)
 {
-    int i = 0;
+    int iCnt = 0;
 
-    i = 5;
-    while (i > 0)
+    if (iNo < 0) // updater
     {
-        printf("%d\n", i);
-        i--;
+        iNo = -iNo;
+    }
+
+    iCnt = iNo;
+    while (iCnt > 0)
+    {
+        printf("*");
+        iCnt--;
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
+
+    Display(iValue);
 
     return 0;
 }

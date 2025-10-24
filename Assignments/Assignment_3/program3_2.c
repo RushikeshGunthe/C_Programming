@@ -8,30 +8,41 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name:   Display
-// Input:           None
-// Output:          5 to 1 numbers printed
-// Description:     This function Displays numbers from 5 to 1 on the screen
+// Function Name:   PrintFactors
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and print factors of that number
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void Display()
+void PrintFactors(int iNo)
 {
-    int i = 0;
+    int iCnt = 0;
 
-    i = 5;
-    while (i > 0)
+    if (iNo <= 0) // updater for negative number
     {
-        printf("%d\n", i);
-        i--;
+        iNo = -iNo;
+    }
+
+    for (iCnt = 2; iCnt <= iNo / 2; iCnt++)
+    {
+        if (iNo % iCnt == 0)
+        {
+            printf("%d\n", iCnt);
+        }
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
+
+    PrintFactors(iValue);
 
     return 0;
 }

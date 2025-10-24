@@ -9,29 +9,34 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //
 // Function Name:   Display
-// Input:           None
-// Output:          5 to 1 numbers printed
-// Description:     This function Displays numbers from 5 to 1 on the screen
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and prints "Hello" if number is less than 10 otherwise prints "Demo"
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void Display()
+void Display(int iNo)
 {
-    int i = 0;
-
-    i = 5;
-    while (i > 0)
+    if (iNo < 10)
     {
-        printf("%d\n", i);
-        i--;
+        printf("Hello\n");
+    }
+    else
+    {
+        printf("Demo\n");
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
+
+    Display(iValue);
 
     return 0;
 }

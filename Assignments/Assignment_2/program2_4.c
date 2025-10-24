@@ -9,29 +9,40 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 //
 // Function Name:   Display
-// Input:           None
-// Output:          5 to 1 numbers printed
-// Description:     This function Displays numbers from 5 to 1 on the screen
+// Input:           Integer
+// Output:          Integer
+// Description:     This function accepts two numbers from user and prints second number of times first number on screen
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void Display()
+void Display(int iNo1, int iNo2)
 {
-    int i = 0;
+    int iCnt = 0;
 
-    i = 5;
-    while (i > 0)
+    if (iNo2 < 0)
     {
-        printf("%d\n", i);
-        i--;
+        iNo2 = -iNo2;
+    }
+
+    for (iCnt = 1; iCnt <= iNo2; iCnt++)
+    {
+        printf("%d\n", iNo1);
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+    int iCount = 0;
+
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
+    printf("Enter frequency:\n");
+    scanf("%d", &iCount);
+
+    Display(iValue, iCount);
 
     return 0;
 }

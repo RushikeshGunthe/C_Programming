@@ -8,30 +8,39 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name:   Display
-// Input:           None
-// Output:          5 to 1 numbers printed
-// Description:     This function Displays numbers from 5 to 1 on the screen
+// Function Name:   PrintEven
+// Input:           Integer
+// Output:          None
+// Description:     This function accepts a number from user and prints that number of even numbers on screen
 // Author:          Rushikesh Vinod Gunthe
 // Date:            24/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-void Display()
+void PrintEven(int iNo)
 {
-    int i = 0;
-
-    i = 5;
-    while (i > 0)
+    int iCnt = 0;
+    int iEven = 0;
+    if (iNo <= 0)
     {
-        printf("%d\n", i);
-        i--;
+        return;
+    }
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        iEven += 2;
+        printf("%d\n", iEven);
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
+
+    PrintEven(iValue);
 
     return 0;
 }
