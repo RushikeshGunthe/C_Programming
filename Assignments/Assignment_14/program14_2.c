@@ -12,7 +12,7 @@
 typedef int BOOL;
 
 //////////////////////////////////////////////////////////////////////////////////////////
-// Function Name:   DisplayDigit
+// Function Name:   CheckZero
 // Input:           Integer               7245
 // Output:          boolean               false
 // Description:     Accepts a number from user and  returns true if number contains zero in it otherwise returns false if not contains zero
