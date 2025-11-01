@@ -6,25 +6,20 @@
 
 #include <stdio.h>
 
-#define TRUE 1
-#define FALSE 0
-
-typedef int BOOL;
-
 //////////////////////////////////////////////////////////////////////////////////////////
-// Function Name:   DisplayDigit
+// Function Name:   CountLessThanSix
 // Input:           Integer               7245
-// Output:          boolean               false
-// Description:     Accepts a number from user and  returns true if number contains zero in it otherwise returns false if not contains zero
+// Output:          Integer               3
+// Description:     Accepts a number from user and  returns frequency of 4 in it
 // Author:          Rushikesh Vinod Gunthe
 // Date:            29/10/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////
 
-BOOL CheckZero(int iNo)
+int CountLessThanSix(int iNo)
 {
     int iDigit = 0;
-    BOOL bFlag = FALSE;
+    int iFrequency = 0;
 
     if (iNo < 0)
     {
@@ -35,14 +30,13 @@ BOOL CheckZero(int iNo)
     {
         iDigit = iNo % 10;
 
-        if (iDigit == 0)
+        if (iDigit < 6)
         {
-            bFlag = TRUE;
-            break;
+            iFrequency++;
         }
         iNo = iNo / 10;
     }
-    return bFlag;
+    return iFrequency;
 }
 
 // Time Complexity: o(n)
@@ -50,21 +44,13 @@ BOOL CheckZero(int iNo)
 int main()
 {
     int iValue = 0;
-    BOOL bRet = FALSE;
+    int iRet = 0;
 
     printf("Enter a number:\n");
     scanf("%d", &iValue);
 
-    bRet = CheckZero(iValue);
+    iRet = CountLessThanSix(iValue);
 
-    if (bRet == TRUE)
-    {
-        printf("It contains zero");
-    }
-    else
-    {
-        printf("There is no zero");
-    }
-
+    printf("Frequency of numbers less than 6 in given number is: %d", iRet);
     return 0;
 }
